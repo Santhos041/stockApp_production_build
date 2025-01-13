@@ -11,6 +11,21 @@ function Signup() {
     const [fname, setFname] = useState('');
     const [lname, setLname] = useState('');
 
+
+    const bgImage = 'https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D'; // Use the correct path to your image file
+
+    // Styles for the container that holds the background image
+    const containerStyle = {
+        backgroundImage: `url(${bgImage})`,  // Set the background image
+        backgroundSize: 'cover',             // Ensure the image covers the entire area
+        backgroundPosition: 'center',        // Center the image
+        backgroundRepeat: 'no-repeat',       // Prevent image repetition
+        height: '100vh',                     // Full viewport height
+        display: 'flex',                     // Use flexbox to center the form
+        justifyContent: 'center',            // Center horizontally
+        alignItems: 'center',                // Center vertically
+        margin: 0,                           // Remove default body margin
+    };
     async function submit(e) {
         e.preventDefault();
 
@@ -49,6 +64,7 @@ function Signup() {
     }
 
     return (
+        <div style={containerStyle}>
         <form onSubmit={submit}>
             <div className="sign_form">
                 <div className="sign_det">
@@ -100,6 +116,7 @@ function Signup() {
                 </div>
             </div>
         </form>
+        </div>
     );
 }
 

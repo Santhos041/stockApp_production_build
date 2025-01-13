@@ -36,18 +36,25 @@ body{
 
 .log_form{
     display:flex;
-   
     justify-content: center;
     align-items: center;
     background-size: cover;
     width: 100vw;
     height:100vh;
-    background-image: url("C:\Users\santh\OneDrive\Documents\stockprediction_mern\client\public\stockbg1.jpg");
+    
     /* background-color: rgb(135, 130, 124); */
     border-radius: 10px;
     
 }
-
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure the image covers the whole viewport */
+    z-index: 1;
+}
 
 .log_det{
     display: flex;

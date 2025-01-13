@@ -8,10 +8,9 @@
 # testing
 /coverage
 
-# production
-/build
+
 # Ignore environment files
-.env
+
 
 # Ignore model files
 *.h5
